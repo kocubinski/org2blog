@@ -53,8 +53,10 @@
 (require 'xml-rpc)
 (require 'metaweblog)
 
-(unless (version-list-< (version-to-list (org-version)) '(8 0 0))
-  (require 'ox))
+;; this check breaks when el-get gets/builds org-mode. version string is empty
+;(unless (version-list-< (version-to-list (org-version)) '(8 0 0))
+;  (require 'ox))
+(require 'ox)
 
 (defgroup org2blog/wp nil
   "Post to weblogs from Emacs"
